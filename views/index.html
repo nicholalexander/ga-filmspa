@@ -46,14 +46,21 @@
       <div class="starter-template">
         <h1> Filmspa! </h1>
 
-          <form action="/search-omdb" method="post">
+          <form>
             Enter the name of the film you wish for! <input type="text" name="name">
           </form>
       </div>
 
-      <div class="results-hanger">
+      <div class="search-results">
+        <table class="table" id="results-hanger">
+          <tr>
+            <td>Star Wars: Episode VI - Return of the Jedi</td>
+            <td>1983</td>
+            <td>Favorite</td>
+          </tr>
+        </table>
       </div>
-      
+
     </div><!-- /.container -->
 
 
@@ -62,5 +69,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/js/jquery-2.1.4.js"</script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
