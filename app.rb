@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'json'
 require 'pry'
+require 'httparty'
 
 class MyMovieApi < Sinatra::Base
   configure :development do
@@ -12,6 +13,16 @@ class MyMovieApi < Sinatra::Base
   get '/' do
     File.read('views/index.html')
   end
+
+  # post '/search-omdb' do 
+  #   film = params[:name]
+  #   # sample query: http://www.omdbapi.com/?s=star+wars&y&r=json
+  #   film = film.gsub(" ", "+") 
+  #   query = "http://omdbapi.com/?s=#{film}&y&r=json"
+  #   response = HTTParty.get("http://omdbi.com/#{query}")
+  #   binding.pry
+  #   redirect 'results'
+  # end
 
   # list all the favorites (being stored in the data.json file)
   get '/favorites' do
