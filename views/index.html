@@ -50,16 +50,14 @@
             Enter the name of the film you wish for! <input type="text" name="name">
           </form>
       </div>
-      <div class="details-hanger">
-      </div>
       <div class="search-results">
         <table class="table" id="results-hanger">
-<!--           <tr>
-            <td><a href="" data="tt0076759">Star Wars: Episode VI - Return of the Jedi</a></td>
+          <!-- <tr>
+            <td><a href="" data="tt0076759" data-toggle="modal" data-target="#myModal">Star Wars: Episode VI - Return of the Jedi</a></td>
             <td>1983</td>
             <td>Favorite</td>
-          </tr>
-          
+          </tr> -->
+          <!-- 
           <tr>
             <td>
               <div class="row details">
@@ -80,13 +78,32 @@
         </table>
       </div>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Film Details</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save To Favorites</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery-2.1.4.js"</script>
+    <script src="/js/jquery-2.1.4.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
   </body>

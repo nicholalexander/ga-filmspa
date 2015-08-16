@@ -46,17 +46,18 @@ var renderDetailedResults = function (results){
   console.log(results)
   // Title / Year/ Actors / Plot / Poster / Rating
 
-  detailsDiv = '<div class=details><tr><td><div class="row details"><div class="col-md-4"><div class="thumbnail"><img src= '
+  detailsDiv = '<div class="details"><div class="row details"><div class="col-md-12"><div class="thumbnail"><img src= '
   + results.Poster 
   + ' alt="..." class="img img-responsive"><div class="caption"><h3>'
   + results.Title 
   + ' </h3><p> '
   + results.Plot 
-  + '</p><p><a href="#" class="btn btn-default" role="button">Close</a> <a href="#" class="btn btn-primary" role="button">Favorite</a> </p></div></div></div></div></td></tr><details>'
-  // $('*[data-id="22"]');
-  $('#details-hanger').append(detailsDiv);
-  $(detailsDiv).toggle(500);
+  + '</p></div></div></div></div></div>'
+  $('*[data-id="22"]');
 
+  $('.details').remove();
+  $('.modal-body').append(detailsDiv);
+  $('.modal').modal('show');  
 }
 
 var getFilmDetails = function(filmId) {
