@@ -40,4 +40,8 @@ post '/favorites' do
   movie.to_json
 end
 
+not_found do
+  status 404
+  erb :errornotfound
+end
 

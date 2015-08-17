@@ -1,0 +1,21 @@
+html { 
+  background: url(/images/error.gif) no-repeat center center fixed; 
+  background-size: cover;
+}
+
+.my-error {
+  font-size: 120px;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.my-error a {
+  color: red;
+}
+
+.my-error span {
+  font-size: .5em;
+  font-style: italic;
+}
