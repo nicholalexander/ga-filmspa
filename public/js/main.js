@@ -80,7 +80,7 @@ var renderDetailedResults = function (results){
 
 var getFilmDetails = function(filmId) {
   //setup the query string
-  var query = "http://www.omdbapi.com/?i=" + filmId + "&plot=full&r=json"
+  var query = "https://www.omdbapi.com/?i=" + filmId + "&plot=full&r=json"
   
   //make the ajax call
   var request = $.ajax({
