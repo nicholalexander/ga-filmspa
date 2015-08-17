@@ -8,12 +8,30 @@ var renderSearchResults = function (results){
       + val2.Title
       + "</a></td><td>"
       + val2.Year 
-      + "</td><td>Favorite</td></tr>";
+      // + "</td><td>Favorite</td></tr>";
+
+      + "</td><td><a href='#' class='btn btn-success' role='button'>Favorite</a></td>";
       $('#results-hanger').append(rowDiv);
-      //add event listener
-      $('a').last().on("click", function(e){
+      //add event listener for details.
+      $($('a').last().parent().parent().find('a')[0]).on("click", function(e){
         e.preventDefault();
         getFilmDetails($(this).data("id"));
+      });
+
+      //add event listener for adding to favorites
+      $('a').last().on("click", function (){
+        console.log("favorite!");
+
+        //find associated data
+        favorite = $(this).parent().parent().find('a').first();
+
+        //set up payload
+        id = favorite.data('id');
+        title = favorite.text();
+
+        console.log(id, title);
+        $.post("favorites", { name: title, oid: id});
+
       });
     });  
   });   
