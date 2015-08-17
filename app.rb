@@ -4,7 +4,6 @@ require 'json'
 require 'pry'
 require 'httparty'
 
-
 # Set your root path
 get '/' do
   File.read('views/index.html')
