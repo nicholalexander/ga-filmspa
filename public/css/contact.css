@@ -1,0 +1,11 @@
+.calling-card {
+  margin-top: 100px;
+  color: #333;
+  border: 1px solid #eee;
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+.calling-card h1 {
+  font-family: serif;
+}
