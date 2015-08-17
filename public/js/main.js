@@ -45,7 +45,7 @@ var getSearchResults = function (){
   film = film.replace(' ', "+")
 
   //setup the query string
-  query = "http://omdbapi.com/?s=" + film + "&y&r=json"
+  query = "https://omdbapi.com/?s=" + film + "&y&r=json"
 
   // make the ajax call
   var request = $.ajax({
